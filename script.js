@@ -50,6 +50,13 @@ function renderToHtml() {
 
 // Function Delete
 function handleDelete(index) {
+  // confirm delete
+  let confDelete = confirm('Lanjutkan hapus ?');
+
+  if (!confDelete) {
+    return;
+  }
+
   // Delete 1 data dari array
   absensi_data.splice(index, 1);
 
